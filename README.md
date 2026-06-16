@@ -121,7 +121,7 @@ Final prediction = (60% × XGBoost) + (40% × Random Forest)
  
 ## 🧠 What I Learned
  
-This was one of my first data science projects and I learned a lot:
+This was my second data science projects and I learned a lot:
  
 - **How to work with real datasets** — understanding what each column means and how to clean the data before using it
 - **The difference between XGBoost and Random Forest** — XGBoost learns from its mistakes one tree at a time while Random Forest uses many independent trees that vote together

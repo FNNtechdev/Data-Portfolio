@@ -9,7 +9,7 @@
  
 ## 📌 About This Project
  
-This project was completed as part of the **Ngao Labs Data Science Programme — Module 1.**
+This project was completed as part of the **Ngao Labs Data Science Programme — Module 3.**
  
 The goal was to build a machine learning model that predicts the total amount of money a tourist will spend when visiting Tanzania, based on information such as their country of origin, age group, purpose of visit, number of nights stayed, and travel arrangements.
  

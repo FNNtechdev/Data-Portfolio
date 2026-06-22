@@ -86,46 +86,44 @@ My goal is to become a data professional who can transform raw data into reliabl
 
 Learning data is not only about algorithms.
 
-It is about understanding the complete journey:
-Raw Data
-↓
-Understanding
-↓
-Cleaning
-↓
-Exploration
-↓
-Feature Engineering
-↓
-Modelling
-↓
-Insights
-↓
-Impact
-
-
-Every project teaches me how real-world data behaves beyond the classroom.
-
+It is about understanding the complete journey of transforming raw information into meaningful solutions:
+         Raw Data
+             ↓
+      Understanding Data
+             ↓
+        Data Cleaning
+             ↓
+    Exploratory Analysis
+             ↓
+   Feature Engineering
+             ↓
+        Modelling
+             ↓
+         Insights
+             ↓
+          Impact
 
 ---
 
 # 🗂️ Repository Structure
 Data-Portfolio/
-
+Data-Portfolio/
 │
-├── Data-Science-Projects/
+├── 📊 Data-Science-Projects/
+│ │
+│ ├── 🌍 Tanzania-Tourism-Expenditure-Prediction-Zindi/
+│ │
+│ ├── 💰 Financial-Inclusion-Prediction/
+│ │
+│ └── 🤖 Other-Machine-Learning-Projects/
 │
-│ ├── Tanzania-Tourism-Expenditure-Prediction-Zindi/
-│ ├── Financial-Inclusion-Prediction/
-│ └── Other-ML-Projects/
+├── ⚙️ Data-Engineering-Projects/
 │
-├── Data-Engineering-Projects/
+├── 🗄️ SQL-Projects/
 │
-├── SQL-Projects/
+├── 🤖 Machine-Learning-Projects/
 │
-├── Machine-Learning-Projects/
-│
-└── Learning-Journey/
+└── 📚 Learning-Journey/
 
 
 

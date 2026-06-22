@@ -1,53 +1,111 @@
-# 📊 Faith Njoroge | Data Science & Data Engineering Portfolio
+# 📊 Faith Njoroge | Data Professional Portfolio
 
-![Python](https://img.shields.io/badge/Python-3.10-blue)
-![Data Science](https://img.shields.io/badge/Data%20Science-Learning%20by%20Building-green)
-![Data Engineering](https://img.shields.io/badge/Data%20Engineering-In%20Progress-orange)
-![Projects](https://img.shields.io/badge/Projects-Real%20World%20Datasets-purple)
+<p align="center">
+
+<img src="https://readme-typing-svg.herokuapp.com?font=Fira+Code&size=28&duration=3000&pause=1000&color=2F80ED&center=true&vCenter=true&width=650&lines=Data+Professional;Data+Scientist;Data+Engineer;Machine+Learning+Enthusiast;Building+Solutions+with+Data" />
+
+</p>
+
+<p align="center">
+
+<img src="https://img.shields.io/badge/Python-Data%20Science-blue?style=for-the-badge&logo=python">
+<img src="https://img.shields.io/badge/SQL-Data%20Engineering-orange?style=for-the-badge&logo=postgresql">
+<img src="https://img.shields.io/badge/Machine%20Learning-Projects-green?style=for-the-badge&logo=scikitlearn">
+
+</p>
+
+
+## 👋 Welcome to My Data Journey
 
 Welcome to my data portfolio.
 
-This repository documents my journey of becoming a data professional through **hands-on projects, real-world datasets, and continuous practice**.
+This repository represents my journey as a **Data Professional** through hands-on projects, real-world datasets, continuous learning, and practical problem solving.
 
-Here you will find my work in **Data Science, Machine Learning, SQL, and Data Engineering**, including projects from structured programmes, independent learning, and African data challenges.
+Here you will find my work across:
 
-I believe the best way to learn data is by building — every notebook, script, and project here represents a problem I explored, cleaned, analyzed, and attempted to solve.
+📊 Data Science  
+⚙️ Data Engineering  
+🤖 Machine Learning  
+🗄️ SQL & Databases  
+
+Every notebook, script, and project here represents a challenge I explored, a problem I attempted to solve, and a skill I developed.
+
+> "Data is not just numbers. Behind every dataset is a story waiting to be discovered."
+
 
 ---
 
 # 👩🏾‍💻 About Me
 
-Hello, I'm **Faith Njoroge**, an aspiring **Data Scientist and Data Engineer** passionate about using data to solve meaningful real-world problems.
+Hello, I'm **Faith Njoroge**.
 
-I am currently strengthening my skills through the **Ngao Labs Data Science Programme**, where I have been working through the complete data science workflow:
+I am a Mathematics and Computer Science student passionate about using data to understand problems, create solutions, and support better decisions.
 
-- Data collection and understanding
-- Data cleaning and preprocessing
-- Exploratory Data Analysis (EDA)
-- Feature engineering
-- Machine learning modelling
-- Model evaluation and improvement
+My journey in data has been built through:
 
-Alongside structured learning, I participate in **Zindi Africa challenges**, where I apply my skills to real datasets and experience the challenges faced when working with imperfect real-world data.
+- Structured learning programmes
+- Real-world datasets
+- African data challenges
+- Independent projects
+- Consistent practice
 
-I am also building my foundation in **Data Engineering**, through **Data Ladder Program** where am focusing on:
 
-- SQL and database concepts
-- Data pipelines
-- Data processing workflows
-- Python programming for data systems
+Currently, I am strengthening my skills through:
+
+
+## 🌍 Ngao Labs Data Science Programme
+
+Through this programme, I have been practicing the complete data science workflow:
+
+✅ Understanding datasets  
+✅ Data cleaning  
+✅ Exploratory Data Analysis (EDA)  
+✅ Data preprocessing  
+✅ Feature engineering  
+✅ Machine learning modelling  
+✅ Model evaluation and improvement  
+
+
+## ⚙️ Data Engineering Journey
+
+Building strong foundations in:
+
+✅ SQL and databases  
+✅ Data processing workflows  
+✅ Data pipelines  
+✅ Python for data systems  
+✅ Data management practices  
+
 
 My goal is to become a data professional who can transform raw data into reliable insights and practical solutions.
 
+
 ---
 
-# 🎯 My Learning Philosophy
+# 🧠 My Data Philosophy
 
-> "Skills are built through consistent practice, curiosity, and solving real problems."
+Learning data is not only about algorithms.
 
-This repository is not only a collection of completed projects; it is a record of growth.
+It is about understanding the complete journey:
+Raw Data
+↓
+Understanding
+↓
+Cleaning
+↓
+Exploration
+↓
+Feature Engineering
+↓
+Modelling
+↓
+Insights
+↓
+Impact
 
-Some projects show my first attempts, others show improved approaches after learning new techniques. Every challenge has helped me understand how data professionals think and work.
+
+Every project teaches me how real-world data behaves beyond the classroom.
+
 
 ---
 
@@ -59,7 +117,7 @@ Data-Portfolio/
 │
 │ ├── Tanzania-Tourism-Expenditure-Prediction-Zindi/
 │ ├── Financial-Inclusion-Prediction/
-│ └── Other ML Projects
+│ └── Other-ML-Projects/
 │
 ├── Data-Engineering-Projects/
 │
@@ -69,84 +127,177 @@ Data-Portfolio/
 │
 └── Learning-Journey/
 
+
+
 ---
 
 # 🚀 Featured Projects
 
-| Project | Area | Skills Demonstrated |
-|---|---|---|
-| 🌍 Tanzania Tourism Expenditure Prediction | Machine Learning | Data preprocessing, feature engineering, XGBoost, Random Forest |
-| 💰 Financial Inclusion Prediction | Data Science | Data exploration, cleaning, modelling |
-| 💳 Loan Default Prediction | Machine Learning | EDA, feature preparation, prediction workflows |
 
-More projects are continuously added as I grow.
+## 🌍 Tanzania Tourism Expenditure Prediction
+
+**Zindi Africa Machine Learning Challenge**
+
+Predicting tourist expenditure using real tourism survey data.
+
+### Skills Demonstrated:
+
+- Data preprocessing
+- Missing value handling
+- Feature engineering
+- Target encoding
+- Model evaluation
+- XGBoost
+- Random Forest
+- Ensemble modelling
+
+
+---
+
+## 💰 Financial Inclusion Prediction
+
+Exploring factors affecting access to financial services.
+
+### Skills Demonstrated:
+
+- Data exploration
+- Data cleaning
+- Visualization
+- Feature preparation
+- Machine learning workflow
+
+
+---
+
+## 💳 Loan Default Prediction
+
+Building predictive workflows around financial risk.
+
+### Skills Demonstrated:
+
+- Exploratory Data Analysis
+- Data preparation
+- Feature understanding
+- Prediction modelling
+
 
 ---
 
 # 🛠️ Technical Skills
 
+
 ## Programming
-- Python
-- SQL
+
+🐍 Python  
+🗄️ SQL  
+
 
 ## Data Analysis
+
 - Pandas
 - NumPy
-- Exploratory Data Analysis
 - Data Cleaning
+- Exploratory Data Analysis
 - Data Visualization
 
+
 ## Machine Learning
+
 - Scikit-learn
 - Feature Engineering
+- Regression Models
+- Classification Models
 - Model Evaluation
-- Regression and Classification Models
+
 
 ## Data Engineering Foundations
+
 - Database concepts
 - Data pipelines
-- Data processing workflows
-- Data management with SQL
+- Data transformation
+- Data validation
+- ETL fundamentals
+
 
 ## Tools
+
 - Git & GitHub
-- Google Colab
+- VS Code
 - Jupyter Notebook
+- Google Colab
+
 
 ---
 
-# 📈 Current Learning Goals
+# 📈 Current Mission
 
-Currently focusing on becoming job-ready by improving:
+My current focus is becoming job-ready by improving:
 
-✅ Building end-to-end data projects  
+✅ Building complete end-to-end projects  
 ✅ Writing cleaner and reusable Python code  
 ✅ Strengthening SQL skills  
-✅ Understanding production data workflows  
-✅ Developing Data Engineering projects  
+✅ Developing data engineering workflows  
+✅ Understanding production-level practices  
+✅ Creating solutions using real datasets  
+
 
 ---
 
 # 🌍 Why Data?
 
-I am interested in data because behind every dataset there is a real story.
+I believe data has the power to explain problems, reveal opportunities, and create better decisions.
 
-Whether it is understanding customer behaviour, improving business decisions, or solving challenges in African communities, I believe data can help create better solutions.
+From businesses to communities, good data solutions can help people understand challenges and build smarter systems.
+
+My interest is especially focused on using technology and data to contribute meaningful solutions in Africa and beyond.
+
+
+---
+
+# ☕ Behind The Code
+
+Every project in this repository represents more than code.
+
+It represents:
+
+🌱 Curiosity  
+🔥 Persistence  
+📚 Learning  
+💡 Problem solving  
+🚀 Growth  
+
+
+Some projects show where I started.
+
+Others show how much I have improved.
+
+The journey continues.
+
 
 ---
 
 # 🤝 Let's Connect
 
-I am always open to:
+I enjoy connecting with:
 
-- Learning opportunities
-- Data collaborations
-- Feedback on my projects
-- Conversations about technology and data
+- Data professionals
+- Developers
+- Recruiters
+- Learners
+- People passionate about technology and problem solving
 
-LinkedIn:
-[Connect with me](https://linkedin.com/in/faith-njoroge-dev)
+
+LinkedIn: (https://linkedin.com/in/faith-njoroge-dev)
+
+
 
 ---
 
 ⭐ This portfolio is actively updated as I continue learning, building projects, and growing as a data professional.
+
+
+<p align="center">
+
+<b>Building with data. Learning every day. Creating impact.</b>
+
+</p>

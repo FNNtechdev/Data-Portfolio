@@ -53,29 +53,38 @@ My journey in data has been built through:
 Currently, I am strengthening my skills through:
 
 
-## 🌍 Ngao Labs Data Science Programme
+## 🌍 Data Science Learning Journey
 
-Through this programme, I have been practicing the complete data science workflow:
+Through the **Ngao Labs Data Science Programme**, I have been building practical Data Science skills by working with real-world datasets, collaborative challenges, and end-to-end machine learning workflows.
 
-✅ Understanding datasets  
-✅ Data cleaning  
-✅ Exploratory Data Analysis (EDA)  
-✅ Data preprocessing  
-✅ Feature engineering  
-✅ Machine learning modelling  
-✅ Model evaluation and improvement  
+The programme has strengthened my understanding of the complete data science lifecycle, including:
+
+✅ Understanding and exploring real-world datasets  
+✅ Data cleaning and quality assessment  
+✅ Exploratory Data Analysis (EDA) and visualization  
+✅ Data preprocessing and feature engineering  
+✅ Building and evaluating machine learning models  
+✅ Improving model performance through experimentation  
+✅ Participating in data challenges using African datasets  
+
+Beyond learning techniques, Ngao Labs has helped me understand how data professionals approach real problems — from messy raw data to meaningful solutions.
 
 
-## ⚙️ Data Engineering Journey
+## ⚙️ Data Engineering Learning Journey
 
-Building strong foundations in:
+Through the **Data Ladder Program**, I am building strong foundations in Data Engineering and learning how data moves from raw sources into reliable systems.
 
-✅ SQL and databases  
-✅ Data processing workflows  
-✅ Data pipelines  
-✅ Python for data systems  
-✅ Data management practices  
+My learning journey focuses on:
 
+✅ SQL and database concepts  
+✅ Data extraction, transformation, and loading (ETL) workflows  
+✅ Data processing and cleaning pipelines  
+✅ Python for data engineering tasks  
+✅ Data validation and quality checks  
+✅ Database design concepts  
+✅ Building reliable and reusable data workflows  
+
+This journey is helping me understand not only how to analyze data, but also how to prepare, manage, and transform data for real-world applications.
 
 My goal is to become a data professional who can transform raw data into reliable insights and practical solutions.
 
@@ -119,9 +128,9 @@ Data-Portfolio/
 │   │
 │   ├── 🌍 Tanzania-Tourism-Expenditure-Prediction-Zindi/
 │   │
-│   ├── 💰 Financial-Inclusion-Prediction/
+│   ├── 💰 Loan-default-Prediction/
 │   │
-│   └── 🤖 Other-Machine-Learning-Projects/
+│   └── 💰 Financial-Inclusion-Prediction/
 │
 ├── ⚙️ Data-Engineering-Projects/
 │
@@ -285,15 +294,25 @@ The journey continues.
 
 I enjoy connecting with:
 
-- Data professionals
-- Developers
-- Recruiters
-- Learners
-- People passionate about technology and problem solving
+- 📊 Data professionals
+- 💻 Developers
+- 🚀 Tech enthusiasts
+- 📚 Fellow learners
+- 🌍 People passionate about using technology to solve real-world problems
 
 
-LinkedIn: (https://linkedin.com/in/faith-njoroge-dev)
+Let's connect and share ideas, opportunities, and experiences:
 
+🔗 [Connect with me on LinkedIn](https://linkedin.com/in/faith-njoroge-dev)
+
+💻 [Explore my GitHub projects](https://github.com/FNNtechdev)
+
+
+I am always open to:
+- Learning opportunities
+- Data collaborations
+- Project discussions
+- Feedback on my work
 
 
 ---

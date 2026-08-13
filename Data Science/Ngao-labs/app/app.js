@@ -85,7 +85,13 @@ const I18N = {
     tryAgain: 'Try again',
     footer: 'AfyaGuide uses the cleaned Kenya Master Health Facility List and a structured health-need taxonomy.\nNot a diagnostic service · Always verify details with the facility · Data may change',
     dataError: 'Could not load facility data. Ensure taxonomy.json and facilities.json are in the same folder.',
-    stillLoading: 'Data is still loading. Please wait a moment.'
+    stillLoading: 'Data is still loading. Please wait a moment.',
+    voiceListen: 'Listening… speak now',
+    voiceTap: 'Tap the mic to speak',
+    voiceUnsupported: 'Voice input is not supported in this browser',
+    voiceDenied: 'Microphone permission denied',
+    voiceError: 'Could not capture speech. Try again or type.',
+    voiceDone: 'Got it — review and search when ready'
   },
   sw: {
     badge: 'Utafutaji wa vituo unaoongozwa na data',
@@ -158,7 +164,13 @@ const I18N = {
     tryAgain: 'Jaribu tena',
     footer: 'AfyaGuide inatumia Orodha Safi ya Vituo vya Afya vya Kenya na uainishaji wa mahitaji ya afya.\nSi huduma ya uchunguzi · Thibitisha maelezo na kituo · Data inaweza kubadilika',
     dataError: 'Imeshindwa kupakia data ya vituo. Hakikisha taxonomy.json na facilities.json ziko kwenye folda moja.',
-    stillLoading: 'Data bado inapakia. Tafadhali subiri kidogo.'
+    stillLoading: 'Data bado inapakia. Tafadhali subiri kidogo.',
+    voiceListen: 'Inasikiliza… sema sasa',
+    voiceTap: 'Gusa maikrofoni ili kuzungumza',
+    voiceUnsupported: 'Kuingiza kwa sauti hakutumiki kwenye kivinjari hiki',
+    voiceDenied: 'Ruhusa ya maikrofoni imekataliwa',
+    voiceError: 'Imeshindwa kunasa sauti. Jaribu tena au andika.',
+    voiceDone: 'Imepokelewa — hakiki kisha utafute'
   }
 };
 
@@ -269,6 +281,17 @@ function applyLanguage() {
   });
 
   localStorage.setItem('afyaguide_lang', currentLang);
+  const vh = document.getElementById('voiceHint');
+  const bv = document.getElementById('btnVoice');
+  const SR = window.SpeechRecognition || window.webkitSpeechRecognition;
+  if (vh && !(window.__afyaListening)) {
+    vh.textContent = SR ? t('voiceTap') : t('voiceUnsupported');
+    vh.className = 'voice-hint';
+  }
+  if (bv && !SR) {
+    bv.disabled = true;
+    bv.title = t('voiceUnsupported');
+  }
 }
 
 function setLanguage(lang) {
@@ -342,6 +365,108 @@ applyLanguage();
 document.querySelectorAll('.lang-btn').forEach(btn => {
   btn.addEventListener('click', () => setLanguage(btn.dataset.lang));
 });
+
+
+/* ---------- Voice input (Web Speech API) ---------- */
+const btnVoice = $('btnVoice');
+const voiceHint = $('voiceHint');
+let recognition = null;
+let isListening = false; window.__afyaListening = false;
+
+const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+
+function initVoice() {
+  if (!btnVoice) return;
+  if (!SpeechRecognition) {
+    btnVoice.disabled = true;
+    btnVoice.title = t('voiceUnsupported');
+    if (voiceHint) voiceHint.textContent = t('voiceUnsupported');
+    return;
+  }
+  recognition = new SpeechRecognition();
+  recognition.continuous = false;
+  recognition.interimResults = true;
+  recognition.maxAlternatives = 1;
+
+  recognition.onstart = () => {
+    isListening = true; window.__afyaListening = true;
+    btnVoice.classList.add('listening');
+    if (voiceHint) {
+      voiceHint.textContent = t('voiceListen');
+      voiceHint.className = 'voice-hint listening';
+    }
+  };
+
+  recognition.onresult = (event) => {
+    let interim = '';
+    let final = '';
+    for (let i = event.resultIndex; i < event.results.length; i++) {
+      const transcript = event.results[i][0].transcript;
+      if (event.results[i].isFinal) final += transcript;
+      else interim += transcript;
+    }
+    if (final) {
+      userQuery.value = (userQuery.value ? userQuery.value.trim() + ' ' : '') + final.trim();
+    } else if (interim) {
+      // show interim in placeholder-like way via value if empty
+      if (!userQuery.dataset.base) userQuery.dataset.base = userQuery.value;
+      userQuery.value = (userQuery.dataset.base || '') + interim;
+    }
+  };
+
+  recognition.onerror = (event) => {
+    isListening = false; window.__afyaListening = false;
+    btnVoice.classList.remove('listening');
+    delete userQuery.dataset.base;
+    let msg = t('voiceError');
+    if (event.error === 'not-allowed' || event.error === 'service-not-allowed') msg = t('voiceDenied');
+    if (event.error === 'no-speech') msg = t('voiceError');
+    if (voiceHint) {
+      voiceHint.textContent = msg;
+      voiceHint.className = 'voice-hint error';
+    }
+  };
+
+  recognition.onend = () => {
+    isListening = false; window.__afyaListening = false;
+    btnVoice.classList.remove('listening');
+    delete userQuery.dataset.base;
+    if (voiceHint && userQuery.value.trim()) {
+      voiceHint.textContent = t('voiceDone');
+      voiceHint.className = 'voice-hint';
+    } else if (voiceHint && !voiceHint.classList.contains('error')) {
+      voiceHint.textContent = t('voiceTap');
+      voiceHint.className = 'voice-hint';
+    }
+  };
+
+  btnVoice.addEventListener('click', () => {
+    if (!recognition) return;
+    if (isListening) {
+      recognition.stop();
+      return;
+    }
+    // Language: prefer Swahili when SW selected, else English (Kenya)
+    recognition.lang = currentLang === 'sw' ? 'sw-KE' : 'en-KE';
+    try {
+      recognition.start();
+    } catch (e) {
+      // already started
+      console.warn(e);
+    }
+  });
+
+  if (voiceHint) {
+    voiceHint.textContent = t('voiceTap');
+    voiceHint.className = 'voice-hint';
+  }
+}
+
+// Re-apply voice hint when language changes
+const _origApply = typeof applyLanguage === 'function' ? null : null;
+
+initVoice();
+
 
 /* ---------- Example chips ---------- */
 document.querySelectorAll('.example-chip').forEach(chip => {

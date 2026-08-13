@@ -13,6 +13,7 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <div class="bg-scene" aria-hidden="true"></div>
   <header class="header">
     <a href="#" class="logo" onclick="resetApp(); return false;">
       <div class="logo-icon">A</div>
@@ -47,7 +48,19 @@
 
       <div class="search-card">
         <div class="search-label" id="searchLabel">What healthcare service do you need?</div>
-        <textarea id="userQuery" rows="2" placeholder="e.g. I need HIV testing near me, or My child has had a high fever for three days…"></textarea>
+        <div class="query-wrap">
+          <textarea id="userQuery" rows="2" placeholder="e.g. I need HIV testing near me, or My child has had a high fever for three days…"></textarea>
+          <button type="button" class="btn-voice" id="btnVoice" title="Speak" aria-label="Speak your need">
+            <svg class="voice-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3z"/>
+              <path d="M19 10v2a7 7 0 0 1-14 0v-2"/>
+              <line x1="12" y1="19" x2="12" y2="23"/>
+              <line x1="8" y1="23" x2="16" y2="23"/>
+            </svg>
+            <span class="voice-pulse" aria-hidden="true"></span>
+          </button>
+        </div>
+        <p class="voice-hint" id="voiceHint"></p>
         <div class="examples">
           <button type="button" class="example-chip" data-q="I need HIV testing">HIV testing</button>
           <button type="button" class="example-chip" data-q="Family planning services">Family planning</button>

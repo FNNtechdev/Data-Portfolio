@@ -20,7 +20,7 @@ const I18N = {
     safetyTitle: 'Responsible use',
     safetyText: 'AfyaGuide is a facility-discovery tool, not a diagnostic service. It can make mistakes and facility information may change. Please verify important details with the facility or a qualified healthcare professional. If someone is in immediate danger, seek emergency care immediately (call 999).',
     searchLabel: 'What healthcare service do you need?',
-    searchPlaceholder: 'e.g. My child has had a high fever for three days…',
+    searchPlaceholder: 'e.g. I need HIV testing near me, or My child has had a high fever for three days…',
     chipHiv: 'HIV testing',
     chipFp: 'Family planning',
     chipAnc: 'ANC / pregnancy',
@@ -705,16 +705,13 @@ function renderResults(data) {
         </div>
       </div>
       <div class="card-actions">
-        <button type="button" class="btn btn-directions btn-sm get-directions" data-lat="${f.lat}" data-lng="${f.lng}" data-name="${(f.name || '').replace(/"/g, '&quot;')}">
+        ${f.lat && f.lng ? `<button type="button" class="btn btn-directions btn-sm get-directions" data-lat="${f.lat}" data-lng="${f.lng}" data-name="${String(f.name || '').replace(/"/g, '&quot;')}">
           ${t('getDirections')}
-        </button>
+        </button>` : ''}
         ${f.url ? `<a class="btn btn-secondary btn-sm" href="${f.url}" target="_blank" rel="noopener">${t('officialPage')}</a>` : ''}
       </div>
     `;
     facilityList.appendChild(card);
-  });
-      }
-    });
   });
 
   document.querySelectorAll('.get-directions').forEach(btn => {

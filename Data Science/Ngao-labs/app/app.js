@@ -20,7 +20,7 @@ const I18N = {
     safetyTitle: 'Responsible use',
     safetyText: 'AfyaGuide is a facility-discovery tool, not a diagnostic service. It can make mistakes and facility information may change. Please verify important details with the facility or a qualified healthcare professional. If someone is in immediate danger, seek emergency care immediately (call 999).',
     searchLabel: 'What healthcare service do you need?',
-    searchPlaceholder: 'e.g. I need HIV testing near me, or My child has had a high fever for three days…',
+    searchPlaceholder: 'e.g. My child has had a high fever for three days…',
     chipHiv: 'HIV testing',
     chipFp: 'Family planning',
     chipAnc: 'ANC / pregnancy',
